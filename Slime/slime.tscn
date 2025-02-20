@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5lh6lv4440fd"]
+
+[ext_resource type="Script" path="res://Slime/Script/slime.gd" id="1_nnrkm"]
+[ext_resource type="Texture2D" uid="uid://c8aiwwot24ikj" path="res://Slime/Sprite/Slime.png" id="1_w0ert"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ds780"]
+radius = 16.0312
+
+[node name="Slime" type="CharacterBody2D"]
+script = ExtResource("1_nnrkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ds780")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("1_w0ert")
+hframes = 16
+vframes = 2
