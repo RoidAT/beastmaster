@@ -3,17 +3,20 @@
 [ext_resource type="Script" path="res://Slime/Script/slime.gd" id="1_nnrkm"]
 [ext_resource type="Texture2D" uid="uid://c8aiwwot24ikj" path="res://Slime/Sprite/Slime.png" id="1_w0ert"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ds780"]
-radius = 16.0312
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwbdh"]
+radius = 5.0
+height = 20.0
 
 [node name="Slime" type="CharacterBody2D"]
 script = ExtResource("1_nnrkm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_ds780")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -24)
 texture = ExtResource("1_w0ert")
 hframes = 16
 vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mwbdh")
