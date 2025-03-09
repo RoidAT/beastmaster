@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://d46vc6gwphl3"]
 
 [ext_resource type="Texture2D" uid="uid://dt8yj00bh85ek" path="res://Player/Sprite/ExamplePlayerSprite.png" id="1_g7nw7"]
-[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_siwlu"]
-[ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="3_puahr"]
-[ext_resource type="Script" path="res://Player/Scripts/state_idle.gd" id="4_o02bg"]
-[ext_resource type="Script" path="res://Player/Scripts/state_walk.gd" id="5_a5hwr"]
+[ext_resource type="Script" uid="uid://cl8vnn65gsuoc" path="res://Player/Scripts/player.gd" id="1_siwlu"]
+[ext_resource type="Script" uid="uid://4ycrautfhetq" path="res://Player/Scripts/player_state_machine.gd" id="3_puahr"]
+[ext_resource type="Script" uid="uid://d3qqywhcak0bp" path="res://Player/Scripts/state_idle.gd" id="4_o02bg"]
+[ext_resource type="Script" uid="uid://4k0ss1mxjmam" path="res://Player/Scripts/state_walk.gd" id="5_a5hwr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iujqg"]
 
@@ -127,13 +127,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ky2pl"]
 _data = {
-"RESET": SubResource("Animation_deqew"),
-"idle_down": SubResource("Animation_phto7"),
-"idle_side": SubResource("Animation_xbpic"),
-"idle_up": SubResource("Animation_35h08"),
-"walk_down": SubResource("Animation_uxeid"),
-"walk_side": SubResource("Animation_qcnhc"),
-"walk_up": SubResource("Animation_gios2")
+&"RESET": SubResource("Animation_deqew"),
+&"idle_down": SubResource("Animation_phto7"),
+&"idle_side": SubResource("Animation_xbpic"),
+&"idle_up": SubResource("Animation_35h08"),
+&"walk_down": SubResource("Animation_uxeid"),
+&"walk_side": SubResource("Animation_qcnhc"),
+&"walk_up": SubResource("Animation_gios2")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -149,7 +149,7 @@ shape = SubResource("CapsuleShape2D_iujqg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ky2pl")
+&"": SubResource("AnimationLibrary_ky2pl")
 }
 
 [node name="StateMachine" type="Node" parent="."]
